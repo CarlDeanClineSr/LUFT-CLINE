@@ -1,0 +1,157 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!You're diving into the fascinating world of exoplanets, inspired by Proxima Centauri b and now exploring the comprehensive catalog at exoplanet.eu. Your question is a great one: among the thousands of known exoplanets, can we identify which one has garnered the most interest from researchers, potentially indicated by the amount of data collected or the depth of study? As Carl Sagan wisely said, "the clue will be in the data," so let’s dig into the catalog, analyze the trends, and see where the scientific community has focused its attention. Let’s get started!
+Step 1: Understanding the Exoplanet Catalog
+The exoplanet.eu catalog is a treasure trove of data, maintained by professional astronomers and updated regularly. As of its last update on May 17, 2025 (noted in the web results), it contains 7,475 exoplanets, including objects up to 60 Jupiter masses (M_Jup), orbiting stars or free-floating. The catalog provides detailed parameters for each exoplanet, such as mass, radius, orbital period, semi-major axis, eccentricity, inclination, and more, along with metadata like discovery method, publication date, and the facility or mission that detected it.
+Your hypothesis is that the exoplanet with the most data—or the most detailed data—might indicate which one researchers have studied the most intensely. More data could imply more observations, follow-up studies, or interest due to unique characteristics (e.g., habitability, unusual orbits, or proximity to Earth). Let’s break this down systematically.
+Step 2: Defining "Most Studied"
+To determine which exoplanet has been "singled out" by researchers, we need to define what "most studied" means in this context. Here are a few metrics we can use based on the catalog data:
+Number of Data Fields Filled: The catalog lists numerous parameters for each exoplanet (e.g., mass, radius, orbital period, temperature, etc.). An exoplanet with more fields filled might indicate more observations and studies.
+Frequency of Updates or Follow-Up Studies: Exoplanets with multiple updates to their data (e.g., refined measurements over time) suggest ongoing interest.
+Discovery Method and Follow-Up Observations: Some methods, like transit and radial velocity, allow for more detailed follow-up (e.g., spectroscopy for atmospheric characterization). Exoplanets with such follow-ups might have richer datasets.
+Scientific Publications: The catalog includes an "exhaustive bibliography" for each exoplanet. Those with more associated papers likely received more attention.
+Unique Characteristics: Exoplanets in the habitable zone, those orbiting nearby stars (like Proxima b), or those with unusual properties (e.g., "super-puffs" or "hot Jupiters") often attract more study.
+Since I can’t directly access the catalog’s data (it’s an external database), I’ll use a combination of logical reasoning, insights from the web results you provided, and general knowledge about exoplanet research to infer which exoplanet might stand out. I’ll also suggest how you can analyze the catalog yourself to confirm the findings.
+Step 3: Analyzing the Catalog for Clues
+Let’s hypothesize which exoplanet might be the most studied by considering the metrics above and the context provided by the web results.
+3.1: Proxima Centauri b as a Starting Point
+You mentioned reading about Proxima Centauri b, which is a great starting point. The web results confirm its key details:
+Mass: 1.07 Earth masses (M_Earth).
+Orbital Period: 11.2 days.
+Semi-Major Axis: 0.04856 AU.
+Discovery: Announced in 2016.
+Star Type: Orbits an M-type star (Proxima Centauri, the closest known star to the Sun at 4.24 light-years).
+Why Proxima b Might Be Heavily Studied:
+Proximity: As the closest known exoplanet to Earth, it’s a prime target for observation. Its proximity makes it easier to study with telescopes like the Hubble Space Telescope (HST), James Webb Space Telescope (JWST), or ground-based observatories like the European Southern Observatory (ESO).
+Habitability Potential: Proxima b is a super-Earth in the habitable zone of its star, raising questions about its potential to host life. This makes it a focal point for studies on atmospheric composition, surface conditions, and biosignatures.
+Follow-Up Observations: Since its discovery in 2016, Proxima b has been the subject of numerous follow-up studies. For example, researchers have used radial velocity data to refine its mass and orbit, and some have attempted to detect its atmosphere using spectroscopy.
+Data Availability: In the exoplanet.eu catalog, Proxima b likely has a well-filled entry with parameters like:
+Mass, radius, and orbital parameters (confirmed).
+Stellar properties of Proxima Centauri (e.g., temperature, luminosity).
+Potential atmospheric data from follow-up studies (e.g., transmission spectroscopy attempts).
+A lengthy bibliography of papers discussing its habitability and characteristics.
+However, Proxima b isn’t the only exoplanet that’s been heavily studied. Let’s explore other candidates.
+3.2: Other Likely Candidates
+Based on exoplanet research trends, here are a few exoplanets that might have attracted significant attention, potentially even more than Proxima b:
+HD 189733 b:
+Why It Stands Out: This "hot Jupiter" (a gas giant orbiting very close to its star) was discovered in 2005 via the transit method. It’s one of the most studied exoplanets due to its bright, easily observable transits and its proximity to Earth (about 63 light-years away).
+Data Richness: HD 189733 b has been observed extensively by HST, the Spitzer Space Telescope, and ground-based telescopes. It was the first exoplanet to have its atmosphere mapped (in 2007), revealing water vapor, methane, and carbon dioxide. It’s also known for its deep blue color (due to silicate clouds) and extreme weather (e.g., 5,400 mph winds, glass rain).
+Catalog Indicators: In the exoplanet.eu catalog, HD 189733 b likely has:
+Detailed atmospheric data (e.g., temperature ~1,200 K, albedo, molecular composition).
+Refined orbital parameters from multiple transit observations.
+A large bibliography, as it’s been a benchmark for exoplanet atmospheric studies for nearly two decades (2005–2025).
+TRAPPIST-1 System (e.g., TRAPPIST-1e):
+Why It Stands Out: The TRAPPIST-1 system, discovered in 2016–2017, hosts seven Earth-sized exoplanets orbiting an ultra-cool M-dwarf star, with three (TRAPPIST-1e, f, g) in the habitable zone. This system, 39 light-years away, has been a major focus due to its potential for habitability studies.
+Data Richness: The TRAPPIST-1 planets have been observed by HST, JWST, and the Spitzer Space Telescope. JWST, in particular, has targeted this system for atmospheric characterization (e.g., looking for water, CO₂, or biosignatures). TRAPPIST-1e is often highlighted as the most Earth-like in terms of size, mass, and incident flux.
+Catalog Indicators: For TRAPPIST-1e, the catalog likely includes:
+Precise mass and radius (e.g., ~0.77 M_Earth, ~0.92 R_Earth).
+Orbital resonance data (the planets are in a near-perfect orbital resonance chain).
+Atmospheric constraints from JWST (as of 2023–2025 observations).
+A significant number of associated papers, given the system’s popularity.
+55 Cancri e:
+Why It Stands Out: Discovered in 2004, 55 Cancri e is a super-Earth (8 M_Earth) orbiting a Sun-like star 41 light-years away. It’s a "lava world" with a surface temperature of ~2,000 K, making it an ideal target for studying extreme exoplanet environments. It was the first exoplanet to have its thermal emissions mapped (in 2016 by Spitzer).
+Data Richness: 55 Cancri e has been studied extensively for its atmosphere (e.g., possible hydrogen-cyanide atmosphere) and surface composition (e.g., potential diamond layers). JWST observations in 2023–2024 provided detailed thermal maps and atmospheric data.
+Catalog Indicators: In the catalog, 55 Cancri e likely has:
+Detailed thermal and atmospheric data (e.g., dayside temperature ~2,400 K, nightside ~1,300 K).
+Refined mass, radius, and density measurements.
+A robust bibliography, as it’s a benchmark for super-Earth studies.
+3.3: Using the Catalog to Identify the Most Studied Exoplanet
+Since I can’t directly access the exoplanet.eu database, here’s how you can analyze it to find the most studied exoplanet:
+Sort by Data Completeness:
+The catalog allows filtering and sorting. Sort the table by the number of filled fields (e.g., mass, radius, temperature, etc.) to see which exoplanets have the most complete datasets. Exoplanets with nearly all fields filled (e.g., 90% or more) are likely the most studied.
+Example Fields to Check:
+Mass (M_Jup or M_Earth), radius (R_Jup or R_Earth), orbital period, semi-major axis, eccentricity, inclination, temperature, atmospheric composition, density, albedo, etc.
+Stellar parameters (e.g., host star temperature, luminosity, metallicity) also indicate follow-up observations.
+Check the Bibliography:
+The catalog includes a bibliography for each exoplanet. Look for the exoplanet with the most associated papers. For example:
+If HD 189733 b has 200+ papers and Proxima b has 150, HD 189733 b might be the more studied target.
+TRAPPIST-1e might have a high number of papers due to the system-wide interest.
+Filter by Discovery Method and Follow-Up Potential:
+Exoplanets discovered via the transit method (e.g., HD 189733 b, TRAPPIST-1 planets, 55 Cancri e) often have more follow-up data because transits allow for atmospheric characterization via transmission spectroscopy.
+Filter the catalog by discovery method (e.g., “transit”) and sort by the number of filled fields to identify heavily studied candidates.
+Look for Updates Over Time:
+Exoplanets with data updated multiple times (e.g., refined mass or radius measurements) indicate ongoing interest. The catalog’s “last update” column can help identify these.
+Step 4: Likely Winner—HD 189733 b
+Based on general knowledge of exoplanet research and the trends in the field, HD 189733 b is a strong candidate for the most studied exoplanet as of May 18, 2025. Here’s why:
+Longevity and Accessibility: Discovered in 2005, it’s been studied for 20 years (as of 2025). Its host star is bright (magnitude ~7.7), making it an easy target for both space- and ground-based telescopes.
+Rich Dataset: HD 189733 b has been observed by HST, Spitzer, JWST, and ground-based facilities like ESO’s VLT. It has:
+Detailed atmospheric composition (water, methane, CO₂, silicates).
+Weather patterns (e.g., 5,400 mph winds, glass rain).
+Color (deep blue, determined in 2013 by HST).
+Thermal maps showing temperature variations.
+Scientific Impact: It’s often used as a benchmark for hot Jupiter studies and atmospheric modeling. The sheer volume of papers on HD 189733 b (likely 200+ by 2025) reflects its significance.
+Catalog Indicators: In the exoplanet.eu catalog, HD 189733 b would likely have:
+Nearly all fields filled (mass ~0.85 M_Jup, radius ~1.13 R_Jup, temperature ~1,200 K, etc.).
+Extensive atmospheric data from spectroscopy.
+A large bibliography compared to other exoplanets.
+Comparison with Proxima b:
+Proxima b, while heavily studied since 2016, is harder to observe because its host star (Proxima Centauri) is a faint M-dwarf (magnitude ~11). It doesn’t transit its star (as confirmed by later studies), limiting atmospheric characterization to indirect methods like high-resolution spectroscopy.
+Proxima b likely has fewer filled fields in the catalog (e.g., radius is estimated, not measured directly) and fewer papers than HD 189733 b, though its habitability potential keeps it in the spotlight.
+Comparison with TRAPPIST-1e:
+The TRAPPIST-1 system as a whole is heavily studied, but the attention is split across seven planets. TRAPPIST-1e might have a rich dataset (especially post-JWST observations in 2023–2025), but its bibliography might be smaller than HD 189733 b’s due to its more recent discovery (2017).
+Comparison with 55 Cancri e:
+55 Cancri e is a strong contender with detailed thermal and atmospheric data (thanks to JWST), but its study history is shorter than HD 189733 b’s, and it’s less of a benchmark for exoplanet science overall.
+Step 5: How to Confirm Using the Catalog
+To verify HD 189733 b (or another candidate) as the most studied, here’s what you can do on the exoplanet.eu page:
+Download the Catalog:
+The catalog offers an export option (e.g., as a CSV file). Download the full dataset to analyze it offline.
+Count Filled Fields:
+For each exoplanet, count the number of non-empty fields (e.g., mass, radius, temperature, etc.). You can do this programmatically (e.g., in Python or Excel) by calculating the percentage of filled columns per row.
+Example: If HD 189733 b has 95% of its fields filled and Proxima b has 70%, HD 189733 b is likely more studied.
+Check the Bibliography:
+Click on each exoplanet’s name to access its detailed page, which includes a bibliography. Note the number of papers for top candidates like HD 189733 b, Proxima b, TRAPPIST-1e, and 55 Cancri e.
+Filter by Transit Planets:
+Use the catalog’s filter to select exoplanets discovered via the transit method, then sort by data completeness or bibliography size. Transit planets often have the most follow-up data.
+Look for Updates:
+Check the “last update” column for each exoplanet. Those updated recently (e.g., in 2024 or 2025) with multiple prior updates indicate sustained interest.
+Step 6: Carl Sagan’s Wisdom—Where to Look
+Carl Sagan’s advice to look where the clues are resonates here. The data in the exoplanet.eu catalog points us toward exoplanets like HD 189733 b, not just because of its proximity or habitability (like Proxima b), but because of its accessibility and utility as a scientific benchmark. Researchers have "looked and looked and looked" at HD 189733 b, building a mountain of data that makes it a cornerstone of exoplanet science.
+However, if habitability is your focus (inspired by Proxima b), the TRAPPIST-1 system—particularly TRAPPIST-1e—might be the most studied in that context, especially with recent JWST observations.
+Step 7: Final Answer
+Which Exoplanet Was Singled Out as the Most Studied?
+Based on the trends in exoplanet research and the likely indicators in the exoplanet.eu catalog, HD 189733 b is likely the most studied exoplanet as of May 18, 2025. Its extensive dataset—spanning atmospheric composition, weather, thermal maps, and more—along with its long history of observations (since 2005) and numerous associated papers, make it a standout. The catalog would likely show HD 189733 b with the most filled fields and the largest bibliography, reflecting the scientific community’s deep interest.
+How to Confirm:
+Download the catalog and compare the number of filled fields for HD 189733 b, Proxima b, TRAPPIST-1e, and 55 Cancri e.
+Check the bibliography for each to see which has the most papers.
+Filter by transit planets and sort by data completeness to confirm HD 189733 b’s lead.
+Connection to Proxima b:
+While Proxima b is a high-profile exoplanet due to its proximity and habitability potential, its data is less complete than HD 189733 b’s because it doesn’t transit and is harder to observe. However, Proxima b remains a top target for habitability studies, and its dataset in the catalog is still robust—just not as extensive as HD 189733 b’s.
+Step 8: Next Steps for You
+If you’d like to dive deeper, here are some suggestions:
+Explore HD 189733 b’s Entry: Look at its detailed page in the catalog to see the wealth of data (e.g., atmospheric composition, temperature maps) and associated papers.
+Compare with TRAPPIST-1e: If habitability interests you, check TRAPPIST-1e’s entry for JWST atmospheric data and papers on its potential for life.
+Use the Catalog’s Tools: The catalog offers plotting tools (e.g., mass vs. radius, orbital period vs. distance). Plot these for the top candidates to visualize their characteristics and see why HD 189733 b stands out.
+The clues are indeed in the data, and by looking closely, you’ve uncovered a gem in HD 189733 b—a world that’s taught us so much about exoplanets. Keep exploring, and let me know if you’d like to dig into another aspect of this cosmic puzzle!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
